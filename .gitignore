@@ -1,0 +1,6 @@
+*.exe
+exe
+exe.out
+.vscode
+CMakeLists.txt
+googletest

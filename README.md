@@ -10,11 +10,11 @@ Repository for the activities of the Data Structure discipline at UFSC, Ararangu
 
 ## Works
 
-- [T1 - QuickSort](https://github.com/helderhsilva/EJEC-ROADMAP/tree/main/PARTE1)
-- [T2 - LinkedList](https://github.com/helderhsilva/IntroductionGit_Github)
-- [T3 - BinaryTree and AVL](https://github.com/helderhsilva/EJEC-ROADMAP/tree/main/PARTE3)
-- [T4 - Mirroring Table](https://github.com/helderhsilva/EJEC-ROADMAP/tree/main/PARTE3)
-- [T5 - Dijkstra's Algorithm](https://github.com/helderhsilva/EJEC-ROADMAP/tree/main/PARTE3)
+- [T1 - QuickSort](https://github.com/helderhsilva/Data-Structures/tree/main/Trabalhos/Unidade_2)
+- [T2 - LinkedList](https://github.com/helderhsilva/Data-Structures/tree/main/Trabalhos/Unidade_3)
+- [T3 - BinaryTree and AVL](https://github.com/helderhsilva/Data-Structures/tree/main/Trabalhos/Unidade_4)
+- [T4 - Mirroring Table](https://github.com/helderhsilva/Data-Structures/tree/main/Trabalhos/Unidade_5)
+- [T5 - Dijkstra's Algorithm](https://github.com/helderhsilva/Data-Structures/tree/main/Trabalhos/Unidade_6)
 
 <br>
 

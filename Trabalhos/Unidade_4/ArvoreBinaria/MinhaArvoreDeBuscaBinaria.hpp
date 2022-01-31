@@ -122,15 +122,22 @@ class MinhaArvoreDeBuscaBinaria : public ArvoreDeBuscaBinaria<T>
 
     Nodo<T> *buscaPai(T chave, Nodo<T> *pai) const
     {
-        while (pai != nullptr && pai->chave != chave && pai->filhoEsquerda->chave != chave && pai->filhoDireita->chave != chave)
+        if (pai != nullptr && pai->chave != chave)
         {
             if (pai->chave < chave)
             {
-                pai = pai->filhoDireita;
+                if (pai->filhoDireita->chave != chave)
+                {
+                    return this->buscaPai(chave, pai->filhoDireita);
+                }
             }
-            else
+
+            if (pai->chave > chave)
             {
-                pai = pai->filhoEsquerda;
+                if (pai->filhoEsquerda->chave != chave)
+                {
+                    return this->buscaPai(chave, pai->filhoEsquerda);
+                }
             }
         }
         return pai;

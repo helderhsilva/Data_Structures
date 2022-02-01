@@ -1,6 +1,11 @@
+#Executaveis
 *.exe
 exe
 exe.out
+
+#Configurações do VSCode
 .vscode
+
+#GoogleTest
 CMakeLists.txt
 googletest

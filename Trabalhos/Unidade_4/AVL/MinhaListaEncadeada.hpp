@@ -6,7 +6,7 @@
 template <typename T>
 class MinhaListaEncadeada :  public ListaEncadeadaAbstrata<T>
 {
-        public:
+    public:
     MinhaListaEncadeada()
     {
         this->_tamanho = 0;

@@ -11,7 +11,7 @@
 template<typename T>
 class MinhaArvoreDeBuscaBinaria : public ArvoreDeBuscaBinaria<T>
 {
- protected:
+    protected:
     int buscaQuantidade(Nodo<T> *chave) const
     {
         if (chave != nullptr)
@@ -120,15 +120,32 @@ class MinhaArvoreDeBuscaBinaria : public ArvoreDeBuscaBinaria<T>
 
     Nodo<T> *buscaPai(T chave, Nodo<T> *pai) const
     {
-        while (pai != nullptr && pai->chave != chave && pai->filhoEsquerda->chave != chave && pai->filhoDireita->chave != chave)
+        if (pai == nullptr)
+        {
+            return nullptr;
+        }
+
+        if (pai->chave == chave)
+        {
+            return nullptr;
+        }
+
+        if (pai != nullptr && pai->chave != chave)
         {
             if (pai->chave < chave)
             {
-                pai = pai->filhoDireita;
+                if (pai->filhoDireita->chave != chave)
+                {
+                    return this->buscaPai(chave, pai->filhoDireita);
+                }
             }
-            else
+
+            if (pai->chave > chave)
             {
-                pai = pai->filhoEsquerda;
+                if (pai->filhoEsquerda->chave != chave)
+                {
+                    return this->buscaPai(chave, pai->filhoEsquerda);
+                }
             }
         }
         return pai;
@@ -171,11 +188,6 @@ class MinhaArvoreDeBuscaBinaria : public ArvoreDeBuscaBinaria<T>
 
     T removeDaArvore(T chaveParaRemover, Nodo<T> *chavePai)
     {
-        if (chavePai == nullptr)
-        {
-            return chavePai->chave;
-        }
-
         Nodo<T> *chave;
 
         if (chavePai->chave == chaveParaRemover)
@@ -366,6 +378,11 @@ class MinhaArvoreDeBuscaBinaria : public ArvoreDeBuscaBinaria<T>
         if (this->contem(chave))
         {
             Nodo<T> *chavePai = this->buscaPai(chave, raiz);
+            if (chavePai == nullptr)
+            {
+                this->removeDaArvore(chave, raiz);
+                return;
+            }
             this->removeDaArvore(chave, chavePai);
         }
         return;

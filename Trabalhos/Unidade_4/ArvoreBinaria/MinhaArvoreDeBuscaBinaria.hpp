@@ -1,9 +1,7 @@
-#ifndef MINHAARVOREDEBUSCABINARIA_HPP
-#define MINHAARVOREDEBUSCABINARIA_HPP
+#ifndef MINHA_ARVORE_DE_BUSCA_BINARIA_HPP
+#define MINHA_ARVORE_DE_BUSCA_BINARIA_HPP
 
 #include "ArvoreDeBuscaBinaria.hpp"
-#include <cassert>
-#include <utility>
 
 /**
  * @brief Representa uma árvore binária de busca.
@@ -122,6 +120,16 @@ class MinhaArvoreDeBuscaBinaria : public ArvoreDeBuscaBinaria<T>
 
     Nodo<T> *buscaPai(T chave, Nodo<T> *pai) const
     {
+        if (pai == nullptr)
+        {
+            return nullptr;
+        }
+
+        if (pai->chave == chave)
+        {
+            return nullptr;
+        }
+
         if (pai != nullptr && pai->chave != chave)
         {
             if (pai->chave < chave)
@@ -180,11 +188,6 @@ class MinhaArvoreDeBuscaBinaria : public ArvoreDeBuscaBinaria<T>
 
     T removeDaArvore(T chaveParaRemover, Nodo<T> *chavePai)
     {
-        if (chavePai == nullptr)
-        {
-            return chavePai->chave;
-        }
-
         Nodo<T> *chave;
 
         if (chavePai->chave == chaveParaRemover)
@@ -375,6 +378,11 @@ class MinhaArvoreDeBuscaBinaria : public ArvoreDeBuscaBinaria<T>
         if (this->contem(chave))
         {
             Nodo<T> *chavePai = this->buscaPai(chave, raiz);
+            if (chavePai == nullptr)
+            {
+                this->removeDaArvore(chave, raiz);
+                return;
+            }
             this->removeDaArvore(chave, chavePai);
         }
         return;

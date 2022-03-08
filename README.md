@@ -13,7 +13,7 @@ Repository for the activities of the Data Structure discipline at UFSC, Ararangu
 - [T1 - QuickSort](https://github.com/helderhsilva/Data-Structures/tree/main/Trabalhos/Unidade_2)
 - [T2 - LinkedList](https://github.com/helderhsilva/Data-Structures/tree/main/Trabalhos/Unidade_3)
 - [T3 - BinaryTree and AVL](https://github.com/helderhsilva/Data-Structures/tree/main/Trabalhos/Unidade_4)
-- [T4 - Mirroring Table](https://github.com/helderhsilva/Data-Structures/tree/main/Trabalhos/Unidade_5)
+- [T4 - Hash Table](https://github.com/helderhsilva/Data-Structures/tree/main/Trabalhos/Unidade_5)
 - [T5 - Dijkstra's Algorithm](https://github.com/helderhsilva/Data-Structures/tree/main/Trabalhos/Unidade_6)
 
 <br>

@@ -6,6 +6,10 @@ Repository for the activities of the Data Structure discipline at UFSC, Ararangu
 ## ⚠️ Some Cares
 *If you are a student at UFSC and depending on your professor, this subject is fully protected against plagiarism. So think twice before just copying the works.*
 
+- To Compile: *g++ main.cpp -o exe -g -lgtest -std=c++17 -lpthread*
+- To Run: *./exe*
+- To check for leaks: *valgrind --leak-check=full ./exe*
+
 <br>
 
 ## Works
